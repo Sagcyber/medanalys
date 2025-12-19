@@ -12,3 +12,5 @@ v.1
 5) Add getters to Test class
 6) Add Doctor class with properties
 7) Add getters to Doctor class
+7) Add AnalysisSelector class with properties
+8) Add map of complaints and selectTests method to AnalysisSelector class
