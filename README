@@ -8,3 +8,5 @@ v.1
 1) Add package com.medcenter
 2) Add Patient class with properties
 3) Add getters to Patient class
+4) Add Test class with properties
+5) Add getters to Test class
