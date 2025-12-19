@@ -11,7 +11,7 @@ public class AnalysisSelector {
 
         testByComplaint.put("hairloss", Arrays.asList(
                 new Test("Ferritin","Ferritin level in the blood"),
-                new Test("TSH","Thyroid hormone")
+                new Test("TSH","Thyroid Stimulating Hormone")
         ));
 
         testByComplaint.put("fatigue", Arrays.asList(
