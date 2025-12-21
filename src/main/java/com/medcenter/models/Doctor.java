@@ -1,4 +1,4 @@
-package com.medcenter;
+package com.medcenter.models;
 
 public class Doctor {
 

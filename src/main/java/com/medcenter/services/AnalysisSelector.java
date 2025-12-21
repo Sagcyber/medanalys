@@ -1,4 +1,7 @@
-package com.medcenter;
+package com.medcenter.services;
+
+import com.medcenter.models.Patient;
+import com.medcenter.models.Test;
 
 import java.util.*;
 

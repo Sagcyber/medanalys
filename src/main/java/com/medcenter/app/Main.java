@@ -1,4 +1,9 @@
-package com.medcenter;
+package com.medcenter.app;
+
+import com.medcenter.exceptions.InvalidComplaintException;
+import com.medcenter.models.Patient;
+import com.medcenter.models.Test;
+import com.medcenter.services.AnalysisSelector;
 
 import java.util.*;
 import java.util.stream.Collectors;

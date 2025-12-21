@@ -23,3 +23,4 @@
 17) Add equals() and hashCode() to Test class to handle duplicates in Set
 18) Add user input with Scanner 
 19) Add validation, including InvalidComplaintException
+20) Reorganize project into packages

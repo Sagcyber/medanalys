@@ -1,4 +1,4 @@
-package com.medcenter;
+package com.medcenter.exceptions;
 
 public class InvalidComplaintException extends Exception {
     public InvalidComplaintException(String message){
