@@ -1,5 +1,6 @@
 package com.medcenter;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -7,8 +8,11 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
+        List<String> complainList = new ArrayList<>();
+        complainList.add("headache");
+        complainList.add("fatigue");
 
-        Patient patient = new Patient("Anna", 30, Arrays.asList("hairloss"));
+        Patient patient = new Patient("Anna", 30, complainList);
 
         AnalysisSelector selector = new AnalysisSelector();
 
