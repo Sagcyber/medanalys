@@ -2,7 +2,7 @@
 
 ---
 
-### v.1.0.0
+### v1.0.0
 
 1) Add package com.medcenter
 2) Add Patient class with properties
@@ -24,3 +24,9 @@
 18) Add user input with Scanner 
 19) Add validation, including InvalidComplaintException
 20) Reorganize project into packages
+
+### v.1.1.0
+
+1) Add possibility of scanning several patients
+2) Implement try-with-resources for Scanner to manage memory automatically
+3) Add JavaDoc for all classes and formatted code
