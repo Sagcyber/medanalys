@@ -18,10 +18,23 @@ public class AnalysisSelector {
                 new Test("CBC","Complete blood count"),
                 new Test("Vitamin D","Vitamin D level")
         ));
+
+        testByComplaint.put("headache", Arrays.asList(
+                new Test("CBC","Complete blood count"),
+                new Test("Brain MRI","MRI of the head")
+        ));
     }
 
     public Set<Test> selectTests(Patient patient) {
+
+        if (patient == null
+                || patient.getComplains() == null
+                || patient.getComplains().isEmpty()) {
+            return new LinkedHashSet<>();
+        }
+
         Set<Test> testSet = new LinkedHashSet<>();
+
         for (String complaint : patient.getComplains()) {
             testSet.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
         }

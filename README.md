@@ -17,3 +17,5 @@
 11) Implement test selection by patient complaints
 12) Implement analysis selection logic: collects tests by patient complaints and removes duplicates using LinkedHashSet
 13) Switch README from txt to md 
+14) Add tests to the list of tests
+15) Add null and empty checks to analysis selection logic

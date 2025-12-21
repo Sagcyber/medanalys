@@ -2,6 +2,7 @@ package com.medcenter;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
 
         AnalysisSelector selector = new AnalysisSelector();
 
-        List<Test> recommendedTests = selector.selectTests(patient);
+        Set<Test> recommendedTests = selector.selectTests(patient);
 
         System.out.println("Recommended tests for " + patient.getName() + ":");
         for (Test test : recommendedTests) {
