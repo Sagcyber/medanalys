@@ -21,8 +21,10 @@ public class AnalysisSelector {
     }
 
     public List<Test> selectTests(Patient patient) {
-        String complaint = patient.getComplains().get(0);
-        return testByComplaint.getOrDefault(complaint, new ArrayList<>());
+        List<Test> testList = new ArrayList<>();
+        for (String complaint : patient.getComplains()) {
+            testList.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
+        }
+        return testList;
     }
-
 }
