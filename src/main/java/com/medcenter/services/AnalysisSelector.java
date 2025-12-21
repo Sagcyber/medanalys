@@ -4,11 +4,15 @@ import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
 
 import java.util.*;
-
+/**
+ * Service class to select recommended tests for patients based on their complaints.
+ */
 public class AnalysisSelector {
 
     private Map<String, List<Test>> testByComplaint;
-
+    /**
+     * Initializes the mapping between complaints and corresponding tests.
+     */
     public AnalysisSelector() {
         testByComplaint = new HashMap<>();
 
@@ -27,7 +31,12 @@ public class AnalysisSelector {
                 new Test("Brain MRI","MRI of the head")
         ));
     }
-
+    /**
+     * Selects a set of recommended tests for the given patient based on their complaints.
+     *
+     * @param patient the patient whose complaints will be analyzed
+     * @return a set of recommended tests
+     */
     public Set<Test> selectTests(Patient patient) {
 
         if (patient == null

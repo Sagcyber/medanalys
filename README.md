@@ -26,3 +26,4 @@
 20) Reorganize project into packages
 21) Add possibility of scanning several patients
 22) Implement try-with-resources for Scanner to manage memory automatically
+23) Add JavaDoc for all classes and formatted code

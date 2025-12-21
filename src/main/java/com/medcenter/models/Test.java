@@ -1,11 +1,37 @@
 package com.medcenter.models;
 
 import java.util.Objects;
-
+/**
+ * Represents a medical test with a name and description.
+ */
 public class Test {
 
     private String name;
     private String description;
+    /**
+     * Constructor to create a Test object.
+     *
+     * @param name        the test name
+     * @param description description of what the test checks
+     */
+    public Test(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
+
+    /**
+     * @return the test name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the test description
+     */
+    public String getDescription() {
+        return description;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -17,18 +43,5 @@ public class Test {
     @Override
     public int hashCode() {
         return Objects.hash(name, description);
-    }
-
-    public Test(String name, String description){
-        this.name = name;
-        this.description = description;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
     }
 }
