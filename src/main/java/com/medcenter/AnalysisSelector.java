@@ -20,11 +20,11 @@ public class AnalysisSelector {
         ));
     }
 
-    public List<Test> selectTests(Patient patient) {
-        List<Test> testList = new ArrayList<>();
+    public Set<Test> selectTests(Patient patient) {
+        Set<Test> testSet = new LinkedHashSet<>();
         for (String complaint : patient.getComplains()) {
-            testList.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
+            testSet.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
         }
-        return testList;
+        return testSet;
     }
 }

@@ -16,3 +16,4 @@ v.1
 8) Add map of complaints and selectTests method to AnalysisSelector class
 9) Add Main class to test AnalysisSelector with sample Patient
 10) Implement test selection by patient complaints
+11) Implement analysis selection logic: collects tests by patient complaints and removes duplicates using LinkedHashSet
