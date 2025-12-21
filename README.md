@@ -1,0 +1,19 @@
+## *MEDANALYS APP*
+
+---
+
+### v.1
+
+1) Add package com.medcenter
+2) Add Patient class with properties
+3) Add getters to Patient class
+4) Add Test class with properties
+5) Add getters to Test class
+6) Add Doctor class with properties
+7) Add getters to Doctor class
+8) Add AnalysisSelector class with properties
+9) Add map of complaints and selectTests method to AnalysisSelector class
+10) Add Main class to test AnalysisSelector with sample Patient
+11) Implement test selection by patient complaints
+12) Implement analysis selection logic: collects tests by patient complaints and removes duplicates using LinkedHashSet
+13) Switch README from txt to md 
