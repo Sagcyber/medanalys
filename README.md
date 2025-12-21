@@ -25,7 +25,7 @@
 19) Add validation, including InvalidComplaintException
 20) Reorganize project into packages
 
-### v.1.1.0
+### v1.1.0
 
 1) Add possibility of scanning several patients
 2) Implement try-with-resources for Scanner to manage memory automatically
