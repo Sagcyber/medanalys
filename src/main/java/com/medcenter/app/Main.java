@@ -12,50 +12,60 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        List<Patient> patients = new ArrayList<>();
+        String answer;
 
-        try {
-            System.out.print("Enter your name: ");
-            String name = scanner.nextLine();
-
-            if (name.trim().isEmpty()) {
-                throw new InvalidComplaintException("Name cannot be empty!");
-            }
-
-            System.out.print("Enter your age: ");
-            int age;
+        do {
             try {
-                age = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter your name: ");
+                String name = scanner.nextLine();
+
+                if (name.trim()
+                        .isEmpty()) {
+                    throw new InvalidComplaintException("Name cannot be empty!");
+                }
+
+                System.out.print("Enter your age: ");
+                int age = Integer.parseInt(scanner.nextLine());
                 if (age <= 0) {
                     throw new InvalidComplaintException("Age must be a positive number!");
                 }
-            } catch (NumberFormatException e) {
-                throw new InvalidComplaintException("Age must be a valid number!");
+
+                System.out.print("Enter your complaints (comma separated): ");
+                List<String> complaintList = Arrays.asList(scanner.nextLine()
+                                                                  .split(",\\s*"));
+                complaintList = complaintList.stream()
+                                             .map(String::trim)
+                                             .filter(s -> !s.isEmpty())
+                                             .collect(Collectors.toList());
+
+                if (complaintList.isEmpty()) {
+                    throw new InvalidComplaintException("Complaints cannot be empty!");
+                }
+
+                // Создаём пациента и добавляем в список
+                Patient patient = new Patient(name, age, complaintList);
+                patients.add(patient);
+
+            } catch (InvalidComplaintException | NumberFormatException e) {
+                System.out.println("Error: " + e.getMessage());
+                continue; // возвращаемся к началу цикла для нового ввода
             }
 
-            System.out.print("Enter your complaints (comma separated): ");
-            List<String> complaintList = Arrays.asList(scanner.nextLine().split(",\\s*"));
+            System.out.print("Do you want to add another patient? (yes/no): ");
+            answer = scanner.nextLine()
+                            .trim();
 
-            complaintList = complaintList.stream()
-                                         .map(String::trim)
-                                         .filter(s -> !s.isEmpty())
-                                         .collect(Collectors.toList());
+        } while (answer.equalsIgnoreCase("yes"));
 
-            if (complaintList.isEmpty()) {
-                throw new InvalidComplaintException("Complaints cannot be empty!");
-            }
-
-            Patient patient = new Patient(name, age, complaintList);
-
-            AnalysisSelector selector = new AnalysisSelector();
-            Set<Test> recommendedTests = selector.selectTests(patient);
-
-            System.out.println("Recommended tests for " + patient.getName() + ":");
+        AnalysisSelector selector = new AnalysisSelector();
+        for (Patient p : patients) {
+            Set<Test> recommendedTests = selector.selectTests(p);
+            System.out.println("Recommended tests for " + p.getName() + ":");
             for (Test test : recommendedTests) {
                 System.out.println("- " + test.getName() + ": " + test.getDescription());
             }
-
-        } catch (InvalidComplaintException e) {
-            System.out.println("Error: " + e.getMessage());
         }
     }
 }

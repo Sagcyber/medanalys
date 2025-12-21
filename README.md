@@ -24,3 +24,4 @@
 18) Add user input with Scanner 
 19) Add validation, including InvalidComplaintException
 20) Reorganize project into packages
+21) Add possibility of scanning two patients
