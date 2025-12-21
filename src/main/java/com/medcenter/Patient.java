@@ -6,12 +6,12 @@ public class Patient {
 
     private String name;
     private int age;
-    private List<String> complains;
+    private List<String> complaints;
 
-    public Patient(String name, int age, List<String> complains) {
+    public Patient(String name, int age, List<String> complaints) {
         this.name = name;
         this.age = age;
-        this.complains = complains;
+        this.complaints = complaints;
     }
 
     public String getName() {
@@ -22,7 +22,7 @@ public class Patient {
         return age;
     }
 
-    public List<String> getComplains() {
-        return complains;
+    public List<String> getComplaints() {
+        return complaints;
     }
 }

@@ -1,26 +1,56 @@
 package com.medcenter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<String> complainList = new ArrayList<>();
-        complainList.add("headache");
-        complainList.add("fatigue");
+        Scanner scanner = new Scanner(System.in);
 
-        Patient patient = new Patient("Anna", 30, complainList);
+        try {
+            System.out.print("Enter your name: ");
+            String name = scanner.nextLine();
 
-        AnalysisSelector selector = new AnalysisSelector();
+            if (name.trim().isEmpty()) {
+                throw new InvalidComplaintException("Name cannot be empty!");
+            }
 
-        Set<Test> recommendedTests = selector.selectTests(patient);
+            System.out.print("Enter your age: ");
+            int age;
+            try {
+                age = Integer.parseInt(scanner.nextLine());
+                if (age <= 0) {
+                    throw new InvalidComplaintException("Age must be a positive number!");
+                }
+            } catch (NumberFormatException e) {
+                throw new InvalidComplaintException("Age must be a valid number!");
+            }
 
-        System.out.println("Recommended tests for " + patient.getName() + ":");
-        for (Test test : recommendedTests) {
-            System.out.println("- " + test.getName() + ": " + test.getDescription());
+            System.out.print("Enter your complaints (comma separated): ");
+            List<String> complaintList = Arrays.asList(scanner.nextLine().split(",\\s*"));
+
+            complaintList = complaintList.stream()
+                                         .map(String::trim)
+                                         .filter(s -> !s.isEmpty())
+                                         .collect(Collectors.toList());
+
+            if (complaintList.isEmpty()) {
+                throw new InvalidComplaintException("Complaints cannot be empty!");
+            }
+
+            Patient patient = new Patient(name, age, complaintList);
+
+            AnalysisSelector selector = new AnalysisSelector();
+            Set<Test> recommendedTests = selector.selectTests(patient);
+
+            System.out.println("Recommended tests for " + patient.getName() + ":");
+            for (Test test : recommendedTests) {
+                System.out.println("- " + test.getName() + ": " + test.getDescription());
+            }
+
+        } catch (InvalidComplaintException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

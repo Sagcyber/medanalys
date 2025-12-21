@@ -21,3 +21,5 @@
 15) Implement analysis selection logic with null-safe checks and duplicate prevention using Set
 16) Improve main: add patient scenario and console output
 17) Add equals() and hashCode() to Test class to handle duplicates in Set
+18) Add user input with Scanner 
+19) Add validation, including InvalidComplaintException

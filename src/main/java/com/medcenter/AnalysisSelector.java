@@ -28,14 +28,14 @@ public class AnalysisSelector {
     public Set<Test> selectTests(Patient patient) {
 
         if (patient == null
-                || patient.getComplains() == null
-                || patient.getComplains().isEmpty()) {
+                || patient.getComplaints() == null
+                || patient.getComplaints().isEmpty()) {
             return new LinkedHashSet<>();
         }
 
         Set<Test> testSet = new LinkedHashSet<>();
 
-        for (String complaint : patient.getComplains()) {
+        for (String complaint : patient.getComplaints()) {
             testSet.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
         }
         return testSet;
