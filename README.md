@@ -30,4 +30,4 @@
 1) Add possibility of scanning several patients
 2) Implement try-with-resources for Scanner to manage memory automatically
 3) Add JavaDoc for all classes and formatted code
-4) Add Complaints enum
+4) Add Complaint enum and map user input via switch-case
