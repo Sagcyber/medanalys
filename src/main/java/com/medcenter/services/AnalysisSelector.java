@@ -1,5 +1,6 @@
 package com.medcenter.services;
 
+import com.medcenter.enums.Complaint;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
 
@@ -10,7 +11,7 @@ import java.util.*;
  */
 public class AnalysisSelector {
     
-    private Map<String, List<Test>> testByComplaint;
+    private Map<Complaint, List<Test>> testByComplaint;
     
     /**
      * Initializes the mapping between complaints and corresponding tests.
@@ -18,17 +19,17 @@ public class AnalysisSelector {
     public AnalysisSelector() {
         testByComplaint = new HashMap<>();
         
-        testByComplaint.put("hairloss", Arrays.asList(
+        testByComplaint.put(Complaint.HAIR_LOSS, Arrays.asList(
                 new Test("Ferritin", "Ferritin level in the blood"),
                 new Test("TSH", "Thyroid Stimulating Hormone")
         ));
         
-        testByComplaint.put("fatigue", Arrays.asList(
+        testByComplaint.put(Complaint.FATIGUE, Arrays.asList(
                 new Test("CBC", "Complete blood count"),
                 new Test("Vitamin D", "Vitamin D level")
         ));
         
-        testByComplaint.put("headache", Arrays.asList(
+        testByComplaint.put(Complaint.HEADACHE, Arrays.asList(
                 new Test("CBC", "Complete blood count"),
                 new Test("Brain MRI", "MRI of the head")
         ));
@@ -53,7 +54,7 @@ public class AnalysisSelector {
         
         Set<Test> testSet = new LinkedHashSet<>();
         
-        for (String complaint : patient.getComplaints()) {
+        for (Complaint complaint : patient.getComplaints()) {
             testSet.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
         }
         return testSet;

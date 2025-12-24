@@ -1,5 +1,7 @@
 package com.medcenter.enums;
 
+import com.medcenter.exceptions.InvalidComplaintException;
+
 import java.util.Locale;
 
 public enum Complaint {
@@ -9,7 +11,7 @@ public enum Complaint {
     
     private final String userComplaint;
     
-    public Complaint(String userComplaint) {
+    Complaint(String userComplaint) {
         this.userComplaint = userComplaint;
     }
     
@@ -17,7 +19,8 @@ public enum Complaint {
         return userComplaint;
     }
     
-    public static Complaint fromUserInput(String input){
+    public static Complaint fromUserInput(String input)
+            throws InvalidComplaintException {
         input = input.trim().toLowerCase(Locale.ROOT);
         
         switch(input){
@@ -28,8 +31,7 @@ public enum Complaint {
             case "headache":
                 return HEADACHE;
             default:
-                return null;
+                throw new InvalidComplaintException("Unknown complaint: " + input);
         }
     }
-    
 }

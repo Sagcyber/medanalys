@@ -2,6 +2,8 @@ package com.medcenter.models;
 
 //import com.medcenter.enums.Complaint;
 
+import com.medcenter.enums.Complaint;
+
 import java.util.List;
 /**
  * Represents a patient with name, age, and list of complaints.
@@ -12,7 +14,7 @@ public class Patient {
 
     private int age;
 
-    private List<String> complaints;
+    private List<Complaint> complaints;
 
     /**
      * Constructor to create a Patient object.
@@ -22,7 +24,7 @@ public class Patient {
      * @param complaints list of complaints of the patient
      */
 
-    public Patient(String name, int age, List<String> complaints) {
+    public Patient(String name, int age, List<Complaint> complaints) {
         this.name = name;
         this.age = age;
         this.complaints = complaints;
@@ -44,7 +46,7 @@ public class Patient {
     /**
      * @return list of patient's complaints
      */
-    public List<String> getComplaints() {
+    public List<Complaint> getComplaints() {
         return complaints;
     }
 }

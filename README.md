@@ -31,3 +31,10 @@
 2) Implement try-with-resources for Scanner to manage memory automatically
 3) Add JavaDoc for all classes and formatted code
 4) Add Complaint enum and map user input via switch-case
+
+### v1.1.1
+
+1) Fix AnalysisSelector mapping to use Complaint enum instead of String keys
+2) Ensure type-safe Map<Complaint, List<Test>>
+3) Finalize test selection logic based on patient complaints
+4) Minor cleanup and formatting

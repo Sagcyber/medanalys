@@ -1,5 +1,6 @@
 package com.medcenter.app;
 
+import com.medcenter.enums.Complaint;
 import com.medcenter.exceptions.InvalidComplaintException;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
@@ -53,12 +54,19 @@ public class Main {
                                                  .map(String::trim)
                                                  .filter(s -> !s.isEmpty())
                                                  .collect(Collectors.toList());
-
+                    
                     if (complaintList.isEmpty()) {
                         throw new InvalidComplaintException("Complaints cannot be empty!");
                     }
+                    
+                    List<Complaint> complaints = new ArrayList<>();
+                    
+                    for (String input : complaintList) {
+                        complaints.add(Complaint.fromUserInput(input));
+                    }
+                    
                     // Create patient object and add to list
-                    Patient patient = new Patient(name, age, complaintList);
+                    Patient patient = new Patient(name, age, complaints);
                     patients.add(patient);
 
                 } catch (InvalidComplaintException | NumberFormatException e) {
