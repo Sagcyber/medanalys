@@ -2,6 +2,7 @@ package com.medcenter.app;
 
 import com.medcenter.enums.Complaint;
 import com.medcenter.exceptions.InvalidComplaintException;
+import com.medcenter.exceptions.MedAnalysException;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
 import com.medcenter.services.AnalysisSelector;
@@ -35,17 +36,11 @@ public class Main {
                     // Read patient's name
                     System.out.print("Enter your name: ");
                     String name = scanner.nextLine();
-                    // Validate name is not empty
-                    if (name.trim()
-                            .isEmpty()) {
-                        throw new InvalidComplaintException("Name cannot be empty!");
-                    }
-                    // Read patient's age and validate
+                    
+                    // Read patient's age
                     System.out.print("Enter your age: ");
                     int age = Integer.parseInt(scanner.nextLine());
-                    if (age <= 0) {
-                        throw new InvalidComplaintException("Age must be a positive number!");
-                    }
+                    
                     // Read complaints and clean list
                     System.out.print("Enter your complaints (comma separated): ");
                     List<String> complaintList = Arrays.asList(scanner.nextLine()
@@ -55,9 +50,6 @@ public class Main {
                                                  .filter(s -> !s.isEmpty())
                                                  .collect(Collectors.toList());
                     
-                    if (complaintList.isEmpty()) {
-                        throw new InvalidComplaintException("Complaints cannot be empty!");
-                    }
                     
                     List<Complaint> complaints = new ArrayList<>();
                     
@@ -69,8 +61,11 @@ public class Main {
                     Patient patient = new Patient(name, age, complaints);
                     patients.add(patient);
 
-                } catch (InvalidComplaintException | NumberFormatException e) {
+                } catch (MedAnalysException e) {
                     System.out.println("Error: " + e.getMessage());
+                }
+                catch (NumberFormatException e) {
+                    System.out.println("Error: Age must be a number");
                 }
                 // Ask if user wants to add another patient
                 System.out.print("Do you want to add another patient? (yes/no): ");

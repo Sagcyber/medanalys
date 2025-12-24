@@ -38,3 +38,4 @@
 2) Ensure type-safe Map<Complaint, List<Test>>
 3) Finalize test selection logic based on patient complaints
 4) Minor cleanup and formatting
+5) Refactor complaints handling to enum-based architecture

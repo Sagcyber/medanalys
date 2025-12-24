@@ -1,8 +1,8 @@
 package com.medcenter.exceptions;
 /**
- * Custom exception thrown when patient input is invalid.
+ * Custom exception thrown when patient's complaint input is invalid.
  */
-public class InvalidComplaintException extends Exception {
+public class InvalidComplaintException extends MedAnalysException {
     /**
      * Constructor for InvalidComplaintException.
      *
