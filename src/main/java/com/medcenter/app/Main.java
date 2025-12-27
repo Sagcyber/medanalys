@@ -4,6 +4,7 @@ import com.medcenter.enums.Complaint;
 import com.medcenter.exceptions.MedAnalysException;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
+import com.medcenter.services.AnalysisSelector;
 import com.medcenter.services.AnalysisSelectorImpl;
 import com.medcenter.services.PatientService;
 
@@ -29,10 +30,12 @@ public class Main {
      */
     
     public static void main(String[] args) {
+        
+        AnalysisSelector analysisSelector = new AnalysisSelectorImpl();
+        PatientService patientService = new PatientService(analysisSelector);
+        
         List<Patient> patients = new ArrayList<>();
         String answer;
-        
-        PatientService patientService = new PatientService();
         
         try (Scanner scanner = new Scanner(System.in)) {
             do {
@@ -44,12 +47,14 @@ public class Main {
                     int age = Integer.parseInt(scanner.nextLine());
                     
                     System.out.print("Enter your complaints (comma separated): ");
-                    List<String> rawComplaints = Arrays.stream(scanner.nextLine().split(","))
-                                                       .map(String::trim)
-                                                       .filter(s -> !s.isEmpty())
-                                                       .toList();
+                    String rawComplaints = scanner.nextLine();
                     
-                    Patient patient = patientService.createPatient(name, age, rawComplaints);
+                    Patient patient = patientService.createPatient(
+                            name,
+                            age,
+                            Arrays.asList(rawComplaints.split(","))
+                    );
+                    
                     patients.add(patient);
                     
                 } catch (MedAnalysException e) {
@@ -64,12 +69,15 @@ public class Main {
             } while (answer.equalsIgnoreCase("yes"));
         }
         
-        for (Patient p : patients) {
-            System.out.println("Recommended tests for " + p.getName() + ":");
-            patientService.analyzePatient(p)
-                          .forEach(test ->
-                                           System.out.println("- " + test.getName() + ": " + test.getDescription())
-                          );
+        for (Patient patient : patients) {
+            System.out.println("Recommended tests for " + patient.getName() + ":");
+            
+            Set<Test> tests = patientService.analyzePatient(patient);
+            
+            tests.forEach(test ->
+                                  System.out.println("- " + test.getName() + ": " + test.getDescription())
+            );
         }
     }
 }
+

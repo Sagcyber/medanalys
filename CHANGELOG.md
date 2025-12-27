@@ -43,3 +43,5 @@
 7) Ensure type-safe Map<Complaint, List<Test>>
 8) Minor cleanup and formatting
 9) Introduce PatientService for patient creation and analysis
+10) Make Main thin and move patient-related logic to service layer
+
