@@ -4,6 +4,7 @@ import com.medcenter.enums.Complaint;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
 import dto.PatientRequest;
+import dto.PatientResponse;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +18,7 @@ public class PatientService {
         this.analysisSelector = analysisSelector;
     }
     
-    public Patient createPatient(PatientRequest request) {
+    public PatientResponse getPatientAnalysis(PatientRequest request) {
         
         List<Complaint> complaints = Arrays.stream(request.getComplaints().split(","))
                                            .map(String::trim)
@@ -25,14 +26,14 @@ public class PatientService {
                                            .map(Complaint::fromUserInput)
                                            .toList();
         
-        return new Patient(
+        Patient patient = new Patient(
                 request.getName(),
                 request.getAge(),
                 complaints
         );
-    }
-    
-    public Set<Test> analyzePatient(Patient patient) {
-        return analysisSelector.selectTests(patient);
+        
+        Set<Test> tests = analysisSelector.selectTests(patient);
+        
+        return new PatientResponse(patient.getName(), tests);
     }
 }

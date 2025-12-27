@@ -8,6 +8,7 @@ import com.medcenter.services.AnalysisSelector;
 import com.medcenter.services.AnalysisSelectorImpl;
 import com.medcenter.services.PatientService;
 import dto.PatientRequest;
+import dto.PatientResponse;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,46 +36,33 @@ public class Main {
         AnalysisSelector analysisSelector = new AnalysisSelectorImpl();
         PatientService patientService = new PatientService(analysisSelector);
         
-        List<Patient> patients = new ArrayList<>();
-        String answer;
-        
         try (Scanner scanner = new Scanner(System.in)) {
-            do {
-                try {
-                    System.out.print("Enter your name: ");
-                    String name = scanner.nextLine();
-                    
-                    System.out.print("Enter your age: ");
-                    int age = Integer.parseInt(scanner.nextLine());
-                    
-                    System.out.print("Enter your complaints (comma separated): ");
-                    String rawComplaints = scanner.nextLine();
-                    
-                    PatientRequest request = new PatientRequest(name, age, rawComplaints);
-                    Patient patient = patientService.createPatient(request);
-                    
-                    patients.add(patient);
-                    
-                } catch (MedAnalysException e) {
-                    System.out.println("Error: " + e.getMessage());
-                } catch (NumberFormatException e) {
-                    System.out.println("Error: Age must be a number");
-                }
-                
-                System.out.print("Do you want to add another patient? (yes/no): ");
-                answer = scanner.nextLine().trim();
-                
-            } while (answer.equalsIgnoreCase("yes"));
-        }
-        
-        for (Patient patient : patients) {
-            System.out.println("Recommended tests for " + patient.getName() + ":");
             
-            Set<Test> tests = patientService.analyzePatient(patient);
+            System.out.print("Enter your name: ");
+            String name = scanner.nextLine();
             
-            tests.forEach(test ->
-                                  System.out.println("- " + test.getName() + ": " + test.getDescription())
+            System.out.print("Enter your age: ");
+            int age = Integer.parseInt(scanner.nextLine());
+            
+            System.out.print("Enter your complaints (comma separated): ");
+            String rawComplaints = scanner.nextLine();
+            
+            PatientRequest request =
+                    new PatientRequest(name, age, rawComplaints);
+            
+            PatientResponse response =
+                    patientService.getPatientAnalysis(request);
+            
+            System.out.println("Recommended tests for " + response.getName() + ":");
+            
+            response.getRecommendedTests().forEach(test ->
+                                                           System.out.println("- " + test.getName() + ": " + test.getDescription())
             );
+            
+        } catch (MedAnalysException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Age must be a number");
         }
     }
 }
