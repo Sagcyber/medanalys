@@ -44,4 +44,6 @@
 8) Minor cleanup and formatting
 9) Introduce PatientService for patient creation and analysis
 10) Make Main thin and move patient-related logic to service layer
+11) Encapsulate patient creation and complaints parsing in service layer
+12) Add PatientRequest DTO and refactor Main to use service layer
 

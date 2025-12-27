@@ -7,6 +7,7 @@ import com.medcenter.models.Test;
 import com.medcenter.services.AnalysisSelector;
 import com.medcenter.services.AnalysisSelectorImpl;
 import com.medcenter.services.PatientService;
+import dto.PatientRequest;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -49,11 +50,8 @@ public class Main {
                     System.out.print("Enter your complaints (comma separated): ");
                     String rawComplaints = scanner.nextLine();
                     
-                    Patient patient = patientService.createPatient(
-                            name,
-                            age,
-                            Arrays.asList(rawComplaints.split(","))
-                    );
+                    PatientRequest request = new PatientRequest(name, age, rawComplaints);
+                    Patient patient = patientService.createPatient(request);
                     
                     patients.add(patient);
                     
