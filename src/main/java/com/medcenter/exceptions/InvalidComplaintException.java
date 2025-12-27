@@ -11,5 +11,4 @@ public class InvalidComplaintException extends MedAnalysException {
     public InvalidComplaintException(String message){
         super(message);
     }
-
 }

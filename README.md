@@ -2,40 +2,21 @@
 
 ---
 
-### v1.0.0
+Java console application for selecting medical tests
+based on patient complaints.
 
-1) Add package com.medcenter
-2) Add Patient class with properties
-3) Add getters to Patient class
-4) Add Test class with properties
-5) Add getters to Test class
-6) Add Doctor class with properties
-7) Add getters to Doctor class
-8) Add AnalysisSelector class with properties
-9) Add map of complaints and selectTests method to AnalysisSelector class
-10) Add Main class to test AnalysisSelector with sample Patient
-11) Implement test selection by patient complaints
-12) Implement analysis selection logic: collects tests by patient complaints and removes duplicates using LinkedHashSet
-13) Switch README from txt to md 
-14) Add tests to the list of tests
-15) Implement analysis selection logic with null-safe checks and duplicate prevention using Set
-16) Improve main: add patient scenario and console output
-17) Add equals() and hashCode() to Test class to handle duplicates in Set
-18) Add user input with Scanner 
-19) Add validation, including InvalidComplaintException
-20) Reorganize project into packages
+### Features
+- Patient data input
+- Complaint validation
+- Test recommendation
+- Duplicate prevention
 
-### v1.1.0
+### Technologies
+- Java 17
+- OOP principles
+- Collections Framework
+- Stream API
+- Custom exceptions
 
-1) Add possibility of scanning several patients
-2) Implement try-with-resources for Scanner to manage memory automatically
-3) Add JavaDoc for all classes and formatted code
-4) Add Complaint enum and map user input via switch-case
-
-### v1.1.1
-
-1) Fix AnalysisSelector mapping to use Complaint enum instead of String keys
-2) Ensure type-safe Map<Complaint, List<Test>>
-3) Finalize test selection logic based on patient complaints
-4) Minor cleanup and formatting
-5) Refactor complaints handling to enum-based architecture
+### How to run
+Run Main class

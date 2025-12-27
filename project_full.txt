@@ -1,0 +1,638 @@
+﻿
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\codeStyles\codeStyleConfig.xml ---
+
+<component name="ProjectCodeStyleConfiguration">
+  <state>
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
+  </state>
+</component>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\compiler.xml ---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21" />
+  </component>
+</project>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\gradle.xml ---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\misc.xml ---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{}]]></component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="temurin-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\vcs.xml ---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\.idea\workspace.xml ---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b7b9ea5-10b3-461f-ab81-180ee6715297" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/medcenter/services/AnalysisSelectorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/medcenter/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/medcenter/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/medcenter/exceptions/InvalidComplaintException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/medcenter/exceptions/InvalidComplaintException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/medcenter/services/AnalysisSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/medcenter/services/AnalysisSelector.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="medanalys" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Exception" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sagcyber&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sagcyber/medanalys&quot;,
+    &quot;accountId&quot;: &quot;e7d61090-ab21-429e-9f5c-a9a22cfbfef8&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\Lenovo\.gradle\wrapper\dists\gradle-8.14-bin\38aieal9i53h9rfe7vjup95b9\gradle-8.14" javaHome="C:\Users\Lenovo\.jdks\corretto-21.0.9" gradleVersion="8.14" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="372qjLy4TGlt1OkEOAbCmZWLA23" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.medanalys [:com.medcenter.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.medanalys [:com.medcenter.app.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.medanalys [:com.medcenter.testService.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.medanalys [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/IdeaProjects/medanalys&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Lenovo/IdeaProjects/medanalys/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JAVA&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.28881988&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.13" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b7b9ea5-10b3-461f-ab81-180ee6715297" name="Changes" comment="" />
+      <created>1766111650422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766111650422</updated>
+      <workItem from="1766111651868" duration="16366000" />
+      <workItem from="1766136397461" duration="20000" />
+      <workItem from="1766146313433" duration="1514000" />
+      <workItem from="1766283422419" duration="11062000" />
+      <workItem from="1766302001145" duration="13205000" />
+      <workItem from="1766457616397" duration="27000" />
+      <workItem from="1766485275132" duration="12481000" />
+      <workItem from="1766549293390" duration="391000" />
+      <workItem from="1766549816340" duration="14265000" />
+      <workItem from="1766586898377" duration="649000" />
+      <workItem from="1766646958320" duration="19000" />
+      <workItem from="1766818490452" duration="4185000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\app\Main.java ---
+
+package com.medcenter.app;
+
+import com.medcenter.enums.Complaint;
+import com.medcenter.exceptions.MedAnalysException;
+import com.medcenter.models.Patient;
+import com.medcenter.models.Test;
+import com.medcenter.services.AnalysisSelectorImpl;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+/**
+ * Main class for MedAnalys application.
+ * Handles user input for patients and outputs recommended tests based on complaints.
+ */
+public class Main {
+
+    /**
+     * Entry point of the MedAnalys application.
+     * <p>
+     * Reads patient information from the console, adds patients to a list,
+     * and prints recommended tests for each patient.
+     * Users can enter multiple patients one by one.
+     * </p>
+     *
+     * @param args command-line arguments (not used)
+     */
+    
+    public static void main(String[] args) {
+        List<Patient> patients = new ArrayList<>();
+        String answer;
+        // try-with-resources ensures scanner is closed automatically
+        try (Scanner scanner = new Scanner(System.in)) {
+            do {
+                try {
+                    // Read patient's name
+                    System.out.print("Enter your name: ");
+                    String name = scanner.nextLine();
+                    
+                    // Read patient's age
+                    System.out.print("Enter your age: ");
+                    int age = Integer.parseInt(scanner.nextLine());
+                    
+                    // Read complaints and clean list
+                    System.out.print("Enter your complaints (comma separated): ");
+                    List<String> complaintList = Arrays.asList(scanner.nextLine()
+                                                                      .split(",\\s*"));
+                    complaintList = complaintList.stream()
+                                                 .map(String::trim)
+                                                 .filter(s -> !s.isEmpty())
+                                                 .collect(Collectors.toList());
+                    
+                    
+                    List<Complaint> complaints = new ArrayList<>();
+                    
+                    for (String input : complaintList) {
+                        complaints.add(Complaint.fromUserInput(input));
+                    }
+                    
+                    // Create patient object and add to list
+                    Patient patient = new Patient(name, age, complaints);
+                    patients.add(patient);
+
+                } catch (MedAnalysException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+                catch (NumberFormatException e) {
+                    System.out.println("Error: Age must be a number");
+                }
+                // Ask if user wants to add another patient
+                System.out.print("Do you want to add another patient? (yes/no): ");
+                answer = scanner.nextLine()
+                                .trim();
+
+            } while (answer.equalsIgnoreCase("yes"));
+        }
+        // Analyze all patients and print recommended tests
+        AnalysisSelectorImpl selector = new AnalysisSelectorImpl();
+        for (Patient p : patients) {
+            Set<Test> recommendedTests = selector.selectTests(p);
+            System.out.println("Recommended tests for " + p.getName() + ":");
+            for (Test test : recommendedTests) {
+                System.out.println("- " + test.getName() + ": " + test.getDescription());
+            }
+        }
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\enums\Complaint.java ---
+
+package com.medcenter.enums;
+
+import com.medcenter.exceptions.InvalidComplaintException;
+
+import java.util.Locale;
+
+public enum Complaint {
+    HAIR_LOSS("hair loss"),
+    FATIGUE("fatigue"),
+    HEADACHE("headache");
+    
+    private final String userComplaint;
+    
+    Complaint(String userComplaint) {
+        this.userComplaint = userComplaint;
+    }
+    
+    public String getUserComplaint(){
+        return userComplaint;
+    }
+    
+    public static Complaint fromUserInput(String input)
+            throws InvalidComplaintException {
+        input = input.trim().toLowerCase(Locale.ROOT);
+        
+        switch(input){
+            case "hair loss":
+                return HAIR_LOSS;
+            case "fatigue":
+                return FATIGUE;
+            case "headache":
+                return HEADACHE;
+            default:
+                throw new InvalidComplaintException("Unknown complaint: " + input);
+        }
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\exceptions\InvalidAgeException.java ---
+
+package com.medcenter.exceptions;
+/**
+ * Custom exception thrown when patient's age is invalid.
+ */
+public class InvalidAgeException extends MedAnalysException {
+    /**
+     * Constructor for InvalidAgeException.
+     *
+     * @param message the error message
+     */
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\exceptions\InvalidComplaintException.java ---
+
+package com.medcenter.exceptions;
+/**
+ * Custom exception thrown when patient's complaint input is invalid.
+ */
+public class InvalidComplaintException extends MedAnalysException {
+    /**
+     * Constructor for InvalidComplaintException.
+     *
+     * @param message the error message
+     */
+    public InvalidComplaintException(String message){
+        super(message);
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\exceptions\InvalidNameException.java ---
+
+package com.medcenter.exceptions;
+/**
+ * Custom exception thrown when patient's name is invalid.
+ */
+public class InvalidNameException extends MedAnalysException{
+    /**
+     * Constructor for InvalidNameException.
+     *
+     * @param message the error message
+     */
+    public InvalidNameException(String message) {
+        super(message);
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\exceptions\MedAnalysException.java ---
+
+package com.medcenter.exceptions;
+/**
+ * Origin class for all invalid exceptions
+ */
+public class MedAnalysException extends RuntimeException {
+    /**
+     * Constructor for MedAnalysException.
+     *
+     * @param message the error message
+     */
+    public MedAnalysException(String message) {
+        super(message);
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\models\Doctor.java ---
+
+package com.medcenter.models;
+
+public class Doctor {
+
+    private String name;
+    private String specialization;
+
+    public Doctor(String name, String specialization) {
+        this.name = name;
+        this.specialization = specialization;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\models\Patient.java ---
+
+package com.medcenter.models;
+
+//import com.medcenter.enums.Complaint;
+
+import com.medcenter.enums.Complaint;
+import com.medcenter.exceptions.InvalidAgeException;
+import com.medcenter.exceptions.InvalidComplaintException;
+import com.medcenter.exceptions.InvalidNameException;
+
+import java.util.List;
+/**
+ * Represents a patient with name, age, and list of complaints.
+ */
+public class Patient {
+
+    private String name;
+
+    private int age;
+
+    private List<Complaint> complaints;
+
+    /**
+     * Constructor to create a Patient object.
+     *
+     * @param name       the patient's name
+     * @param age        the patient's age
+     * @param complaints list of complaints of the patient
+     */
+
+    public Patient(String name, int age, List<Complaint> complaints) throws InvalidComplaintException {
+        // Validate name is not empty
+        if (name == null || name.isBlank()) {
+            throw new InvalidNameException("Name cannot be empty");
+            
+        }
+        // Validate age is positive
+        if (age <= 0){
+            throw new InvalidAgeException("Age must be positive");
+        }
+        
+        if (complaints == null || complaints.isEmpty()) {
+            throw new InvalidComplaintException("Complaints cannot be empty");
+        }
+        
+        this.name = name;
+        this.age = age;
+        this.complaints = complaints;
+    }
+
+    /**
+     * @return the patient's name
+     */
+
+    public String getName() {
+        return name;
+    }
+    /**
+     * @return the patient's age
+     */
+    public int getAge() {
+        return age;
+    }
+    /**
+     * @return list of patient's complaints
+     */
+    public List<Complaint> getComplaints() {
+        return complaints;
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\models\Test.java ---
+
+package com.medcenter.models;
+
+import java.util.Objects;
+/**
+ * Represents a medical test with a name and description.
+ */
+public class Test {
+
+    private String name;
+    private String description;
+    /**
+     * Constructor to create a Test object.
+     *
+     * @param name        the test name
+     * @param description description of what the test checks
+     */
+    public Test(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
+
+    /**
+     * @return the test name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the test description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Test test = (Test) o;
+        return Objects.equals(name, test.name) && Objects.equals(description, test.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, description);
+    }
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\services\AnalysisSelector.java ---
+
+package com.medcenter.services;
+
+import com.medcenter.models.Patient;
+import com.medcenter.models.Test;
+
+import java.util.Set;
+
+public interface AnalysisSelector {
+    
+    Set<Test> selectTests(Patient patient);
+    
+
+}
+
+--- FILE: C:\Users\Lenovo\IdeaProjects\medanalys\src\main\java\com\medcenter\services\AnalysisSelectorImpl.java ---
+
+package com.medcenter.services;
+
+import com.medcenter.enums.Complaint;
+import com.medcenter.models.Patient;
+import com.medcenter.models.Test;
+
+import java.util.*;
+
+/**
+ * Service class to select recommended tests for patients based on their complaints.
+ */
+public class AnalysisSelectorImpl implements AnalysisSelector {
+    
+    private Map<Complaint, List<Test>> testByComplaint;
+    
+    /**
+     * Initializes the mapping between complaints and corresponding tests.
+     */
+    public AnalysisSelectorImpl() {
+        testByComplaint = new HashMap<>();
+        
+        testByComplaint.put(Complaint.HAIR_LOSS, Arrays.asList(
+                new Test("Ferritin", "Ferritin level in the blood"),
+                new Test("TSH", "Thyroid Stimulating Hormone")
+        ));
+        
+        testByComplaint.put(Complaint.FATIGUE, Arrays.asList(
+                new Test("CBC", "Complete blood count"),
+                new Test("Vitamin D", "Vitamin D level")
+        ));
+        
+        testByComplaint.put(Complaint.HEADACHE, Arrays.asList(
+                new Test("CBC", "Complete blood count"),
+                new Test("Brain MRI", "MRI of the head")
+        ));
+    }
+    
+    /**
+     * Selects a set of recommended tests for the given patient based on their complaints.
+     *
+     * @param patient the patient whose complaints will be analyzed
+     *
+     * @return a set of recommended tests
+     */
+    
+    @Override
+    public Set<Test> selectTests(Patient patient) {
+        
+        if (patient == null
+                    || patient.getComplaints() == null
+                    || patient.getComplaints()
+                              .isEmpty()) {
+            return new LinkedHashSet<>();
+        }
+        
+        Set<Test> testSet = new LinkedHashSet<>();
+        
+        for (Complaint complaint : patient.getComplaints()) {
+            testSet.addAll(testByComplaint.getOrDefault(complaint, new ArrayList<>()));
+        }
+        return testSet;
+    }
+}

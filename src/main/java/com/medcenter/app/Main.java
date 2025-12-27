@@ -1,11 +1,11 @@
 package com.medcenter.app;
 
 import com.medcenter.enums.Complaint;
-import com.medcenter.exceptions.InvalidComplaintException;
 import com.medcenter.exceptions.MedAnalysException;
 import com.medcenter.models.Patient;
 import com.medcenter.models.Test;
-import com.medcenter.services.AnalysisSelector;
+import com.medcenter.services.AnalysisSelectorImpl;
+import com.medcenter.services.PatientService;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -26,62 +26,49 @@ public class Main {
      *
      * @param args command-line arguments (not used)
      */
+    
     public static void main(String[] args) {
         List<Patient> patients = new ArrayList<>();
         String answer;
-        // try-with-resources ensures scanner is closed automatically
+        
+        PatientService patientService = new PatientService();
+        
         try (Scanner scanner = new Scanner(System.in)) {
             do {
                 try {
-                    // Read patient's name
                     System.out.print("Enter your name: ");
                     String name = scanner.nextLine();
                     
-                    // Read patient's age
                     System.out.print("Enter your age: ");
                     int age = Integer.parseInt(scanner.nextLine());
                     
-                    // Read complaints and clean list
                     System.out.print("Enter your complaints (comma separated): ");
-                    List<String> complaintList = Arrays.asList(scanner.nextLine()
-                                                                      .split(",\\s*"));
-                    complaintList = complaintList.stream()
-                                                 .map(String::trim)
-                                                 .filter(s -> !s.isEmpty())
-                                                 .collect(Collectors.toList());
+                    List<String> rawComplaints = Arrays.stream(scanner.nextLine().split(","))
+                                                       .map(String::trim)
+                                                       .filter(s -> !s.isEmpty())
+                                                       .toList();
                     
-                    
-                    List<Complaint> complaints = new ArrayList<>();
-                    
-                    for (String input : complaintList) {
-                        complaints.add(Complaint.fromUserInput(input));
-                    }
-                    
-                    // Create patient object and add to list
-                    Patient patient = new Patient(name, age, complaints);
+                    Patient patient = patientService.createPatient(name, age, rawComplaints);
                     patients.add(patient);
-
+                    
                 } catch (MedAnalysException e) {
                     System.out.println("Error: " + e.getMessage());
-                }
-                catch (NumberFormatException e) {
+                } catch (NumberFormatException e) {
                     System.out.println("Error: Age must be a number");
                 }
-                // Ask if user wants to add another patient
+                
                 System.out.print("Do you want to add another patient? (yes/no): ");
-                answer = scanner.nextLine()
-                                .trim();
-
+                answer = scanner.nextLine().trim();
+                
             } while (answer.equalsIgnoreCase("yes"));
         }
-        // Analyze all patients and print recommended tests
-        AnalysisSelector selector = new AnalysisSelector();
+        
         for (Patient p : patients) {
-            Set<Test> recommendedTests = selector.selectTests(p);
             System.out.println("Recommended tests for " + p.getName() + ":");
-            for (Test test : recommendedTests) {
-                System.out.println("- " + test.getName() + ": " + test.getDescription());
-            }
+            patientService.analyzePatient(p)
+                          .forEach(test ->
+                                           System.out.println("- " + test.getName() + ": " + test.getDescription())
+                          );
         }
     }
 }
