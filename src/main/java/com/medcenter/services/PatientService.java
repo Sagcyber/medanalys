@@ -17,13 +17,13 @@ public class PatientService {
     
     public Patient createPatient(String name, int age, List<String> rawComplaints) {
         List<Complaint> complaints = rawComplaints.stream()
-                                             .map(Complaint::fromUserInput)
-                                             .toList();
+                                                  .map(Complaint::fromUserInput)
+                                                  .toList();
+        
         return new Patient(name, age, complaints);
     }
     
     public Set<Test> analyzePatient(Patient patient) {
         return analysisSelector.selectTests(patient);
     }
-    
 }

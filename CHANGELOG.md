@@ -42,3 +42,4 @@
 6) Refactor complaints handling to enum-based architecture 
 7) Ensure type-safe Map<Complaint, List<Test>>
 8) Minor cleanup and formatting
+9) Introduce PatientService for patient creation and analysis

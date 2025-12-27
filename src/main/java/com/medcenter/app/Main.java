@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  * Main class for MedAnalys application.
  * Handles user input for patients and outputs recommended tests based on complaints.
  */
+
 public class Main {
 
     /**
